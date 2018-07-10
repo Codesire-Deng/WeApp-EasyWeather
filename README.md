@@ -1,10 +1,11 @@
 # 微信小程序-轻松天气
 
 ## 注意事项
-- 本项目中的key为私人使用，仅供测试，发布作品请勿使用本项目的key，谢谢！
+- 本项目中的天气API密钥为私人购买，仅供测试！发布作品请勿使用本项目的密钥，谢谢！
 
 ## 功能描述
-- 界面简洁的天气查询小程序。
+- 一个界面简洁的天气查询小程序。
+- 本小程序已在微信中发布，搜索“轻松天气”即可找到。
 
 ## 程序截图
 <img src="https://github.com/iFasWind/WeApp-EasyWeather/blob/master/screenshots/Screenshot.png" width="480px" style="display:inline;">

@@ -1,0 +1,222 @@
+<view class='weather'>
+
+  <view class='weather-search-container'>
+
+    <view class='weather-search'>
+
+      <input class='weather-search-input' confirm-type='search' bindinput='inputWeatherSearch' placeholder="请输入城市名" value="{{searchInput}}" />
+
+      <image class='weather-search-clear' src='../../images/clear.png' style='display:{{showClear}}' bindtap='clearInput'></image>
+
+      <view class='weather-search-button'>
+
+        <view class='line'></view>
+
+        <view class='weather-search-button-container' bindtap='btnWeatherSearch'>
+
+          <image class='weather-search-search' src='../../images/search.png'></image>
+
+        </view>
+
+      </view>
+
+    </view>
+
+  </view>
+
+  <view class='index-header'>
+
+    <view class='weather-header'>
+
+      <view class='weather-header-info' bindtap='local'>
+
+        <image class='weather-header-img' src='../../images/location.png'></image>
+
+        <view class='weather-header-city'>{{weather.cityInfo.c3}}</view>
+
+        <view class='weather-header-date'>({{date}})</view>
+
+      </view>
+
+      <view class='weather-header-update' bindtap='refresh'>{{weather.now.temperature_time}} 更新
+        <image class='refresh' src='../../images/refresh.png'></image>
+      </view>
+
+    </view>
+
+    <view class='weather-today'>
+
+      <view class='weather-today-header'>
+
+        <view class='weather-today-temperature'>{{weather.now.temperature}}°</view>
+
+        <view class='weather-today-img'>
+
+          <image class='weather-today-img-icon' src='{{weather.now.weather_pic}}'></image>
+
+        </view>
+
+        <view class='weather-today-info'>
+
+          <view class='weather-today-type'>{{weather.now.weather}}</view>
+
+          <view class='weather-today-temp'>日间：{{weather.f1.day_air_temperature}} ℃</view>
+
+          <view class='weather-today-temp'>晚间：{{weather.f1.night_air_temperature}} ℃</view>
+
+        </view>
+
+      </view>
+
+      <view class='weather-today-other'>
+
+        <view class='weather-today-other-item'>空气：{{weather.now.aqiDetail.quality}}</view>
+
+        <view class='weather-today-other-itemmid'>湿度：{{weather.now.sd}}</view>
+
+        <view class='weather-today-other-item'>PM 2.5：{{weather.now.aqiDetail.pm2_5}}</view>
+
+        <view class='weather-today-other-item'>气压：{{weather.f1.air_press}}</view>
+
+        <view class='weather-today-other-itemmid'>风向：{{weather.now.wind_direction}}</view>
+
+        <view class='weather-today-other-item'>{{weather.f1.day_wind_power}}</view>
+
+      </view>
+
+    </view>
+
+  </view>
+
+  <view class='weather-forecast'>
+
+    <view class='weather-forecast-blank'></view>
+
+    <view class='weather-forecast-container'>
+
+      <view class='weather-forecast-item'>
+
+        <view class='weather-forecast-line'>
+
+          <view>明天</view>
+
+          <view class='weather-forecast-info'>
+
+            <image class='weather-forecast-icon' src='{{weather.f2.day_weather_pic}}'></image>
+
+            <view class='weather-forecast-type'>{{weather.f2.day_weather}} / {{weather.f2.night_weather}}</view>
+
+          </view>
+
+          <view>{{weather.f2.day_air_temperature}} / {{weather.f2.night_air_temperature}} ℃</view>
+
+        </view>
+
+      </view>
+
+      <view class='weather-forecast-item'>
+
+        <view class='weather-forecast-linemid'>
+
+          <view>后天</view>
+
+          <view class='weather-forecast-info'>
+
+            <image class='weather-forecast-icon' src='{{weather.f3.day_weather_pic}}'></image>
+
+            <view class='weather-forecast-type'>{{weather.f3.day_weather}} / {{weather.f3.night_weather}}</view>
+
+          </view>
+
+          <view>{{weather.f3.day_air_temperature}} / {{weather.f3.night_air_temperature}} ℃</view>
+
+        </view>
+
+      </view>
+
+      <view class='weather-forecast-item'>
+
+        <view class='weather-forecast-line'>
+
+          <view>{{weather.f4.weekday}}</view>
+
+          <view class='weather-forecast-info'>
+
+            <image class='weather-forecast-icon' src='{{weather.f4.day_weather_pic}}'></image>
+
+            <view class='weather-forecast-type'>{{weather.f4.day_weather}} / {{weather.f4.night_weather}}</view>
+
+          </view>
+
+          <view>{{weather.f4.day_air_temperature}} / {{weather.f4.night_air_temperature}} ℃</view>
+
+        </view>
+
+      </view>
+
+    </view>
+
+    <view class='weather-forecast-blank'>
+      <image class='more' style='display:none' src='../../images/more.png'></image>
+    </view>
+
+  </view>
+
+  <view class='weather-suggestion'>
+
+    <view class='weather-suggestion-item'>
+
+      <image class='weather-suggestion-icon' src='../../images/uv.png'></image>
+
+      <view class='weather-suggestion-type'>紫外线指数</view>
+
+      <view class='weather-suggestion-name'>{{weather.f1.index.uv.title}}</view>
+
+    </view>
+
+    <view class='weather-suggestion-item'>
+
+      <image class='weather-suggestion-icon' src='../../images/dressing.png'></image>
+
+      <view class='weather-suggestion-type'>穿衣指数</view>
+
+      <view class='weather-suggestion-name'>{{weather.f1.index.clothes.title}}</view>
+
+    </view>
+
+    <view class='weather-suggestion-item'>
+
+      <image class='weather-suggestion-icon' src='../../images/sport.png'></image>
+
+      <view class='weather-suggestion-type'>运动指数</view>
+
+      <view class='weather-suggestion-name'>{{weather.f1.index.sports.title}}</view>
+
+    </view>
+
+    <view class='weather-suggestion-item'>
+
+      <image class='weather-suggestion-icon' src='../../images/car_washing.png'></image>
+
+      <view class='weather-suggestion-type'>洗车指数</view>
+
+      <view class='weather-suggestion-name'>{{weather.f1.index.wash_car.title}}</view>
+
+    </view>
+
+    <view class='weather-suggestion-item'>
+
+      <image class='weather-suggestion-icon' src='../../images/flu.png'></image>
+
+      <view class='weather-suggestion-type'>感冒指数</view>
+
+      <view class='weather-suggestion-name'>{{weather.f1.index.cold.title}}</view>
+
+    </view>
+
+
+  </view>
+
+
+
+</view>

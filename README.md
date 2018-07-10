@@ -3,7 +3,7 @@
 天气查询。
 
 ##程序截图
-
+<img src="https://github.com/iFasWind/WeApp-EasyWeather/blob/master/screenshots/Screenshot.png" width="480px" style="display:inline;">
 
 ##开发环境
 *Windows 10 1803

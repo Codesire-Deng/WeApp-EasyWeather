@@ -8,7 +8,8 @@
 - 本小程序已在微信中发布，搜索“轻松天气”即可找到。
 
 ## 程序截图
-<img src="https://github.com/iFasWind/WeApp-EasyWeather/blob/master/screenshots/Screenshot.png" width="480px" style="display:inline;">
+<img src="https://github.com/iFasWind/WeApp-EasyWeather/blob/master/screenshots/screenshot_01.png" width="480px" style="display:inline;">
+<img src="https://github.com/iFasWind/WeApp-EasyWeather/blob/master/screenshots/screenshot_02.png" width="320px" style="display:inline;">
 
 ## 开发环境
 - Windows 10 1803

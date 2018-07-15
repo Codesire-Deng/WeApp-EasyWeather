@@ -220,6 +220,7 @@ Page({
   // 格式化星期数的函数
   weekdayFormat: function (weekday) {
     switch (weekday) {
+      case 0:
         weekday = "周日";
         break;
       case 1:

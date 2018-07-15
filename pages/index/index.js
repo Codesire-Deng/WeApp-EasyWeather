@@ -23,16 +23,16 @@ Page({
     // 传递对象
     var that = this;
     // 版本检查
-    if (this.data.version !== '1.2.0') {
+    if (this.data.version !== '1.2.1') {
       // 显示版本弹窗
       wx.showModal({
-        title: '1.2.0 更新内容',
-        content: '2018年07月14日\n\n1.可以查看未来6天的天气情况啦\n2.可以将当前天气情况转发给好友\n3.优化搜索逻辑\n4.界面调整\n5.其他代码优化',
+        title: '1.2.1 更新内容',
+        content: '2018年07月14日\n\n1.可以查看未来6天的天气情况啦\n2.可以将当前天气情况转发给好友\n3.优化搜索逻辑\n4.界面调整\n5.其他代码优化\n6.修复日期显示',
         confirmText: '我知道了',
         showCancel: false,
       })
       // 设置版本号
-      wx.setStorageSync('version', '1.2.0')
+      wx.setStorageSync('version', '1.2.1')
     }
 
     // 获取当前经纬度
@@ -220,6 +220,8 @@ Page({
   // 格式化星期数的函数
   weekdayFormat: function (weekday) {
     switch (weekday) {
+        weekday = "周日";
+        break;
       case 1:
         weekday = "周一";
         break;
